@@ -12,6 +12,7 @@ Group: 		Development/Perl
 Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/Test/%{module}-%{version}.tar.gz
 BuildArch: 	noarch
+BuildRoot: 	%{_tmppath}/%{name}-%{version}
 
 %description 
 This is an extremely simple, extremely basic module for writing tests suitable
