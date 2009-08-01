@@ -1,18 +1,18 @@
-%define module  Test-Simple
-%define name    perl-%{module}
-%define version 0.92
-%define release %mkrel 1
+%define upstream_name    Test-Simple
+%define upstream_version 0.92
 
-Name: 		%{name}
-Version: 	%{version}
-Release: 	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary: 	Basic utilities for writing tests
-License: 	GPL or Artistic
+License: 	GPL+ or Artistic
 Group: 		Development/Perl
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Test/%{module}-%{version}.tar.gz
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildArch: 	noarch
-BuildRoot: 	%{_tmppath}/%{name}-%{version}
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description 
 This is an extremely simple, extremely basic module for writing tests suitable
@@ -20,7 +20,7 @@ for CPAN modules and other pursuits. If you wish to do more complicated
 testing, use the Test::More module (a drop-in replacement for this one).
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
