@@ -1,9 +1,9 @@
 %define upstream_name    Test-Simple
-%define upstream_version 0.94
+%define upstream_version 0.96
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary: 	Basic utilities for writing tests
 License: 	GPL+ or Artistic
