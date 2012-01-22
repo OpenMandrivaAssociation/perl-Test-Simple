@@ -10,7 +10,7 @@ License: 	GPL+ or Artistic
 Group: 		Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
-
+Patch0: Test-Simple-0.98-perl5142.diff
 BuildArch: 	noarch
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}
 
@@ -21,6 +21,7 @@ testing, use the Test::More module (a drop-in replacement for this one).
 
 %prep
 %setup -q -n %{upstream_name}-%{upstream_version}
+%patch0 -p0
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
