@@ -1,0 +1,11 @@
+diff -Naur Test-Simple-1.001002.orig/Makefile.PL Test-Simple-1.001002/Makefile.PL
+--- Test-Simple-1.001002.orig/Makefile.PL	2014-04-30 12:25:37.971328244 +0400
++++ Test-Simple-1.001002/Makefile.PL	2014-04-30 12:25:45.801327507 +0400
+@@ -117,6 +117,7 @@
+         $make =~ s{\s+\z}{\n};
+ 
+         my @perls = qw(
++            perl5.14.2
+             perl5.14.1
+             perl5.12.4
+             perl5.12.3
