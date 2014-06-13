@@ -1,4 +1,5 @@
 removed_sources:
   Test-Simple-0.98.tar.gz: 792fc70083905bab7fa443dc379ffb1f0998f068
-sources:
   Test-Simple-1.001002.tar.gz: 179723fbb311d4785ede817ba7ecec43fb19d6d7
+sources:
+  Test-Simple-1.001003.tar.gz: 39cf357d85ca2953956dc7712f395f370cd1b413
