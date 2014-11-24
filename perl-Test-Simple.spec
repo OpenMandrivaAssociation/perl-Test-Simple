@@ -1,5 +1,5 @@
 %define modname	Test-Simple
-%define modver 1.001008
+%define modver 1.001009
 
 Summary:	Basic utilities for writing tests
 
