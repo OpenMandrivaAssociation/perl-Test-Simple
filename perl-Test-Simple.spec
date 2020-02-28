@@ -1,17 +1,17 @@
 %define modname	Test-Simple
-%define modver 1.001009
+#%%define modver 1.001009
+%define modver 1.302171
 
 Summary:	Basic utilities for writing tests
 
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	3
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Test/%{modname}-%{modver}.tar.gz
-Patch0:		Test-Simple-1.001002-perl5142.diff
 BuildArch:	noarch
 BuildRequires:	perl-devel
 
@@ -22,7 +22,6 @@ testing, use the Test::More module (a drop-in replacement for this one).
 
 %prep
 %setup -qn %{modname}-%{modver}
-%patch0 -p1
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -34,4 +33,7 @@ make
 %files
 %doc Changes README
 %{perl_vendorlib}/Test
+%{perl_vendorlib}/Test2
+%{perl_vendorlib}/*.pm
+
 %{_mandir}/man3/*
